@@ -16,7 +16,6 @@ public class UUIDGeneratorService {
 
     StringBuilder sequence = null;
 
-
     Response response = new Response();
 
     boolean isExecute = true;
@@ -36,7 +35,7 @@ public class UUIDGeneratorService {
       }
     }
 
-    response.setUuidSequence(sequence.toString());
+    response.setUuidSequence(sequence.toString().replace("\u0000", ""));
     return response;
 
   }
