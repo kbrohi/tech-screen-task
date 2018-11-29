@@ -16,7 +16,7 @@ import io.swagger.annotations.ApiParam;
 
 @Api
 @RestController
-public class UUIDGeneratorEndpoint {
+public class UUIDGeneratorEndpoint extends BaseEndpoint {
 
   UUIDGeneratorService uuidGeneratorService;
 
@@ -32,6 +32,7 @@ public class UUIDGeneratorEndpoint {
       @ApiParam("Y") @PathVariable("y") Integer y, @ApiParam("Z") @PathVariable("z") Integer z) throws IOException {
 
     Response response;
+
 
     response = uuidGeneratorService.processUUIDGenerator(x, y, z);
 
